@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rastreamento do Pedido</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+    <style>
+      #map {
+        width: 100%;
+        height: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Rastreamento do Pedido</h1>
+    </header>
+    <nav>
+      <ul>
+          <li><a href="login.html">🔑 Login</a></li>
+          <li><a href="index.html">🏠 Início</a></li>
+          <li><a href="cadarpio.html">📜 Cardápio</a></li>
+          <li><a href="pagamento.html">💳 Pagamento</a></li>
+          <li><a href="rastreamento.html">📍 Rastreamento</a></li>
+         
+      </ul>
+  </nav>
+    <main>
+      <section class="tracking">
+        <h2>Pedido a Caminho!</h2>
+        <p>Acompanhe a localização do entregador em tempo real.</p>
+        <div id="map"></div>
+      </section>
+    </main>
+
+    <script>
+      // Posição inicial (simulando um local)
+      var deliveryLocation = [-23.55052, -46.633308]; // Exemplo: São Paulo
+      var map = L.map("map").setView(deliveryLocation, 14);
+
+      // Adicionar o mapa do OpenStreetMap
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution: "&copy; OpenStreetMap contributors",
+      }).addTo(map);
+
+      // Criar marcador do entregador
+      var marker = L.marker(deliveryLocation)
+        .addTo(map)
+        .bindPopup("Entregador a caminho!")
+        .openPopup();
+
+      // Simular movimento do entregador (atualizar a cada 3 segundos)
+      function updateLocation() {
+        deliveryLocation[0] += (Math.random() - 0.5) * 0.002; // Simulação de variação na latitude
+        deliveryLocation[1] += (Math.random() - 0.5) * 0.002; // Simulação de variação na longitude
+
+        marker.setLatLng(deliveryLocation);
+        map.setView(deliveryLocation, 14);
+      }
+
+      setInterval(updateLocation, 3000); // Atualiza a posição a cada 3 segundos
+    </script>
+  </body>
+</html>

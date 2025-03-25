@@ -1,0 +1,129 @@
+/* Reset padrão apenas para o menu */
+.menu-container {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Estilização geral do menu */
+.menu-page {
+    background-color: #f8f6f2 !important;
+    color: #333 !important;
+}
+
+/* Container principal */
+.container {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    gap: 20px;
+}
+
+/* Seção de produtos */
+.products {
+    flex: 3;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Card de produto */
+.product-card {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: scale(1.03);
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product-card h3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+.product-card .price {
+    font-weight: bold;
+    color: #ff4d4d;
+    margin-bottom: 10px;
+}
+
+/* Botão de adicionar ao carrinho */
+.add-to-cart {
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.add-to-cart:hover {
+    background: #ff4d4d;
+}
+
+/* Carrinho lateral */
+.cart {
+    flex: 1;
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 20px;
+}
+
+.cart h2 {
+    font-size: 1.5rem;
+    border-bottom: 2px solid #ff4d4d;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.cart-total {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.checkout-btn {
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.checkout-btn:hover {
+    background: #ff4d4d;
+}

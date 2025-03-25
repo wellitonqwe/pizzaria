@@ -1,0 +1,174 @@
+/* Reset e configurações globais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #121212;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Cabeçalho */
+header {
+  background: #ff4d4d;
+  color: white;
+  padding: 15px 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Barra de navegação */
+
+nav ul {
+  list-style: none;
+  padding: 10px;
+  background: #ff6666;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Layout geral das seções */
+main {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+/* Estilização dos cards de restaurantes e pratos */
+.restaurant,
+.dish,
+.payment {
+  background: #1a1a1a;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 8px;
+  max-width: 400px;
+  text-align: center;
+  border: 1px solid #444;
+}
+
+button {
+  background: #ff4d4d;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #e03e3e;
+}
+
+/* Estilização da tela de login */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+#login {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 350px;
+  text-align: center;
+}
+
+#login h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 15px; /* Espaço abaixo do título */
+}
+
+#login p {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 20px; /* Espaço abaixo do parágrafo */
+}
+
+#login input {
+  width: 100%;
+  padding: 12px;
+  background-color: #ff4d4d;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+#login input::placeholder {
+  color: #0e0d0d;
+}
+
+#login button {
+  width: 100%;
+  background-color: #ff4d4d;
+  margin-bottom: 15px; /* Adiciona espaço abaixo do botão */
+}
+
+#login button:hover {
+  background-color: #ff4d4d;
+}
+
+.forgot-password {
+  margin-top: 10px;
+  color: #ff4d4d;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+/* Rodapé */
+footer {
+  background: #222;
+  padding: 10px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #bbb;
+}
+.products {
+  flex: 3;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding-bottom: 100px; /* Garante espaço para o menu */
+}
+
+#map {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 20;
+  left: 0;
+}
+
+

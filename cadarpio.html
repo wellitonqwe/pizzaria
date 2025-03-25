@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loja de Doces</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Mantém o estilo geral -->
+    <link rel="stylesheet" href="cardapio.css" />
+    <!-- Estilo exclusivo do menu -->
+  </head>
+
+  <body class="menu-page">
+    <header>
+      <h1>Cardápio</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="login.html">🔑 Login</a></li>
+        <li><a href="index.html">🏠 Início</a></li>
+        <li><a href="cadarpio.html">📜 Cardápio</a></li>
+        <li><a href="pagamento.html">💳 Pagamento</a></li>
+        <li><a href="rastreamento.html">📍 Rastreamento</a></li>
+      </ul>
+    </nav>
+
+    <h1>🍰 Doces Deliciosos</h1>
+
+    <div class="container">
+      <!-- Seção de Produtos -->
+      <div class="products">
+        <div class="product-card" data-name="Waffle" data-price="6.50">
+          <img src="/assets/waffle.jpg" alt="Waffle" />
+          <h3>Waffle com Frutas</h3>
+          <p class="price">R$6.50</p>
+          <button class="add-to-cart">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="product-card" data-name="Crème Brûlée" data-price="7.00">
+          <img src="/assets/Creme bulle.jpg" alt="Crème Brûlée" />
+          <h3>Crème Brûlée</h3>
+          <p class="price">R$7.00</p>
+          <button class="add-to-cart">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="product-card" data-name="Macarons" data-price="8.00">
+          <img src="/assets/macarron.jpg" alt="Macarons" />
+          <h3>Macaron Mix de Cinco</h3>
+          <p class="price">R$8.00</p>
+          <button class="add-to-cart">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="product-card" data-name="Tiramisu" data-price="5.50">
+          <img src="/assets/cake-8342822_1280.jpg" alt="Tiramisu" />
+          <h3>Clássico Tiramisu</h3>
+          <p class="price">R$5.50</p>
+          <button class="add-to-cart">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="product-card" data-name="Pudim" data-price="7.50">
+          <img src="/assets/pudin.jpg" alt="Pudim" />
+          <h3>Clássico Pudim</h3>
+          <p class="price">R$7.50</p>
+          <button class="add-to-cart">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product-card" data-name="Bolo_Chocolate" data-price="10.00">
+          <img src="/assets/bolochocolate.jpg" alt="BoloChocolate" />
+          <h3>Bolo Chocolate</h3>
+          <p class="price">R$10.00</p>
+          <button class="add-to-cart">Adicionar ao Carrinho</button>
+        </div>
+      </div>
+
+      <!-- Carrinho -->
+      <div class="cart">
+        <h2>🛒 Seu Carrinho</h2>
+        <div class="cart-items"></div>
+        <p class="cart-total">Total: R$0.00</p>
+        <button class="checkout-btn">Finalizar Pedido</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
